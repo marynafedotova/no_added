@@ -6,13 +6,68 @@
     --black-color: #21221c;
 
 }
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
+ul, ol{
+   list-style-type: none;
+}
+.container {
+  width: min(90%, 1220px);
+  margin: 0 auto;
+}
+@font-face {
+font-family: 'Montserrat';
+src: local('../fonts/Montserrat Regular'), local('Montserrat-Regular'),
+url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+url('../fonts/Montserrat-Regular.woff') format('woff'),
+url('../fonts/Montserrat-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat Bold';
+src: local('../fonts/Montserrat Bold'), local('Montserrat-Bold'),
+url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+url('../fonts/Montserrat-Bold.woff') format('woff'),
+url('../fonts/Montserrat-Bold.ttf') format('truetype');
+font-weight: 700;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat  Medium';
+src: local('../fonts/Montserrat Medium'), local('Montserrat-Medium'),
+url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+url('../fonts/Montserrat-Medium.woff') format('woff'),
+url('../fonts/Montserrat-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat Semi Bold';
+src: local('../fonts/Montserrat Semi Bold'), local('Montserrat-Semi-Bold'),
+url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+font-weight: 600;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat-ExtraBold';
+src: local('../fonts/Montserrat-ExtraBold'), local('Montserrat-ExtraBold'),
+url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+url('../fonts/Montserrat-ExtraBold.woff') format('woff'),
+url('../fonts/Montserrat-ExtraBold.ttf') format('truetype');
+font-weight: 700;
+font-style: normal;
+}
+@font-face {
+font-family: 'Montserrat Black';
+src: local('../fonts/Montserrat-Black'), local('Montserrat-Black'),
+url('../fonts/Montserrat-Black.woff2') format('woff2'),
+url('../fonts/Montserrat-Black.woff') format('woff'),
+url('../fonts/Montserrat-Black.ttf') format('truetype');
+font-weight: 800;
+font-style: normal;
+}
+
  .topbottom100{
   padding: 100px 0px;
  }
@@ -103,10 +158,94 @@
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-
-html, body {
-  overflow-x: hidden;
+body {
+  margin: 0;
+  background: #F8F5F0;
+  font-family: sans-serif;
 }
+
+.parallax-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  will-change: transform;
+}
+
+/* Ягоды */
+.berry {
+  width: 140px;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.08));
+}
+
+/* Шоколад */
+.chocolate {
+  width: 110px;
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.12));
+}
+/* фон */
+.bg {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+}
+
+
+/* рандомне розміщення */
+.berry1 { top: 20%; left: 10%; }
+.berry2 { top: 60%; left: 70%; width: 100px; }
+.berry3 { top: 40%; right: 15%; width: 120px; }
+.berry4 { bottom: 15%; left: 40%; width: 90px; filter: blur(1px); }
+
+.ch1 { top: 15%; right: 8%; transform: rotate(15deg); }
+.ch2 { bottom: 20%; right: 20%; width: 90px; transform: rotate(-10deg); }
+.ch3 { top: 70%; left: 15%; width: 100px; transform: rotate(25deg); }
+.ch4 { top: 35%; left: 50%; width: 80px; filter: blur(1px); transform: rotate(-18deg); }
+.ch5 { bottom: 10%; left: 70%; width: 95px; transform: rotate(12deg); }
+
+.berry1, .ch1 { z-index: 1; }
+.berry2, .ch2 { z-index: 2; }
+.berry3, .ch3 { z-index: 3; }
+.ch4 { opacity: 0.8; }
+.berry4 { opacity: 0.85; }
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Текст */
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+  padding: 100px;
+}
+
+h1 {
+  font-size: 56px;
+  margin: 0 0 20px;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  background: #D96C6C;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
 
 .messenger-chats {
   position: fixed;
@@ -143,57 +282,6 @@ html, body {
 }
 
 
-
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-
-/* Common Style */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-img {
-  width: 100%;
-  height: auto;
-}
-body {
-  overflow: hidden !important;
-}
-a:focus {
-  outline: none;
-  box-shadow: none;
-}
-input:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-input:focus-visible {
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-button:focus,
-:focus-visible {
-  outline: none;
-  border: none;
-}
-
-/* Typography */
-h1 {
-  font-family: "Lexend";
-  font-size: 449px !important;
-  line-height: normal !important;
-  color: var(--white-color) !important;
-  margin: 0 !important;
-}
-h2 {
-  font-family: "Lexend";
-  font-size: 40px;
-  line-height: normal;
-  margin: 0;
-  font-weight: 900;
-}
 /* Header */
 header {
   padding: 22px 28px 0;
@@ -204,328 +292,7 @@ header {
   z-index: 99;
   text-align: center;
 }
-.logo {
-  color: var(--pear-logo);
-}
-h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-/* Cane Image and Wrapper Image */
-.cane-image {
-  max-width: 265px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  mask-image: url(https://www.yudiz.com/codepen/fruity/cane.svg);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-  mask-position: center center;
-  -webkit-mask-size: 100% auto;
-  mask-size: 100% auto;
-  overflow: hidden;
-}
-.cane-image img {
-  width: 100%;
-}
-.cane-labels {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300% !important;
-  mix-blend-mode: multiply;
-  transition: all ease-in-out 0.3s;
-}
-/*Fruits Images */
-.fruit-image {
-  opacity: 1;
-  position: absolute;
-}
-.image-one {
-  max-width: 282px;
-  bottom: 100px;
-}
-.image-two {
-  max-width: 247px;
-  top: 23%;
-  left: 25%;
-}
-.image-three {
-  max-width: 211px;
-  top: 23%;
-  right: 25%;
-}
-.image-four {
-  max-width: 294px;
-  bottom: 100px;
-  right: 0;
-}
-/* After */
-.fruit-image::after {
-  content: "";
-  position: absolute;
-  background: linear-gradient(90deg, #000 3.66%, rgba(0, 0, 0, 0) 92.35%);
-  opacity: 0.43;
-  filter: blur(7.5px);
-  transform: rotate(-6.941deg);
-  right: 0;
-  width: 173px;
-  height: 30px;
-}
-.image-one::after {
-  bottom: -50px;
-}
-.image-two::after {
-  bottom: -200px;
-  height: 22px;
-}
-.image-three::after {
-  bottom: -280px;
-  width: 103px;
-}
-.image-four::after {
-  bottom: -50px;
-}
-/*Section  */
-.section-container-main {
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-  z-index: -1;
-}
-.section-container {
-  width: 300vw;
-  display: flex;
-  position: relative;
-  transition: all ease-in-out 0.5s;
-  align-items: center;
-}
-.section {
-  min-width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  z-index: -1;
-  background: var(--pear-background);
-}
-.section:nth-child(2) {
-  background-color: var(--apple-background);
-}
-.section:nth-child(3) {
-  background-color: var(--exotic-background);
-}
-/* Add this to your CSS */
-/* Buttons */
-button {
-  position: fixed;
-  top: 50%;
-  right: 30px;
-  z-index: 99;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  background-color: var(--white-color);
-  border: none;
-  font-size: 40px;
-  color: var(--apple-logo);
-  transition: all ease-in-out 0.3s;
-  cursor: pointer;
-}
-#prevButton {
-  left: 30px;
-  right: unset;
-  display: none;
-  transition: all ease-in 0.3s;
-}
-.wave {
-  animation: wave-apple-effect 4s linear infinite;
-  animation-direction: normal;
-}
-@keyframes wave-pear-effect {
-  0% {
-    box-shadow: 0 0 0 0px var(--pear-background),
-      0 0 0 0px var(--pear-background);
-  }
-  40% {
-    box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
-      0 0 0 0px var(--pear-background);
-  }
-  80% {
-    box-shadow: 0 0 0 50px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 230, 118, 0);
-  }
-}
-@keyframes wave-apple-effect {
-  0% {
-    box-shadow: 0 0 0 0px var(--apple-background),
-      0 0 0 0px var(--apple-background);
-  }
-  40% {
-    box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
-      0 0 0 0px var(--apple-background);
-  }
-  80% {
-    box-shadow: 0 0 0 50px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 230, 118, 0);
-  }
-}
-@keyframes wave-exotic-effect {
-  0% {
-    box-shadow: 0 0 0 0px var(--exotic-background),
-      0 0 0 0px var(--exotic-background);
-  }
-  40% {
-    box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
-      0 0 0 0px var(--exotic-background);
-  }
-  80% {
-    box-shadow: 0 0 0 50px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 230, 118, 0);
-  }
-}
-/*.......... Responsive.............. */
-@media screen and (max-width: 1550px) {
-  h1 {
-    font-size: 350px !important;
-  }
-  .cane-image {
-    max-width: 280px;
-  }
-  .image-one {
-    max-width: 250px;
-  }
-  .image-two {
-    max-width: 215px;
-    left: 22%;
-    top: 10%;
-  }
-  .image-three {
-    max-width: 180px;
-  }
-  .image-four {
-    max-width: 260px;
-    right: 40px;
-  }
-}
-@media screen and (max-width: 1199px) {
-  h1 {
-    font-size: 300px !important;
-  }
-  .cane-image::after {
-    width: 150%;
-  }
-  .image-one {
-    max-width: 220px;
-  }
-  .image-two {
-    max-width: 185px;
-    left: 18%;
-    top: 10%;
-  }
-  .image-three {
-    max-width: 180px;
-    right: 18%;
-  }
-  .image-four {
-    max-width: 230px;
-  }
-}
-@media screen and (max-width: 991px) {
-  h1 {
-    font-size: 240px !important;
-  }
-  .cane-image {
-    max-width: 250px;
-  }
-  button {
-    height: 80px;
-    width: 80px;
-    top: 90%;
-  }
-  .image-one {
-    max-width: 180px;
-  }
-  .image-two {
-    max-width: 165px;
-    left: 12%;
-    top: 12%;
-  }
-  .image-three {
-    max-width: 150px;
-    right: 12%;
-  }
-  .image-four {
-    max-width: 200px;
-  }
-}
-@media screen and (max-width: 767px) {
-  h1 {
-    font-size: 180px !important;
-  }
-  h2 {
-    font-size: 30px;
-  }
-  .cane-image {
-    max-width: 180px;
-  }
-  button {
-    height: 60px;
-    width: 60px;
-    font-size: 20px;
-  }
-  .image-one {
-    max-width: 180px;
-    bottom: 150px;
-  }
-  .image-two {
-    max-width: 145px;
-    left: 12%;
-    top: 15%;
-  }
-  .image-three {
-    max-width: 130px;
-    right: 10%;
-  }
-  .image-four {
-    max-width: 180px;
-    bottom: 150px;
-  }
-}
-@media screen and (max-width: 575px) {
-  h1 {
-    font-size: 100px !important;
-  }
-  .cane-image::after {
-    width: 100%;
-  }
-  .image-one {
-    max-width: 150px;
-  }
-  .image-two {
-    max-width: 115px;
-    left: 4%;
-    top: 18%;
-  }
-  .image-three {
-    max-width: 100px;
-    right: 4%;
-  }
-  .image-four {
-    max-width: 150px;
-    right: 0;
-  }
-}
+
 .page-wrapper {
   min-height: 100vh;
   display: -webkit-box;
@@ -566,24 +333,34 @@ header .nav-container .container {
   display: flex;
   justify-content: space-between;
 }
+header .nav-container .container .logo{
+  display: flex;
+  align-items: center;
+}
 header .nav-container .container .logo a {
   position: relative;
+  display: block;
 }
 header .nav-container .container .logo a img {
   object-fit: contain;
   border-radius: 4px;
   padding-left: 4px;
   padding-right: 4px;
-  height: 44px;
-  width: 140px;
+
+  width: 100px;
 }
 header .nav-container .container nav {
   vertical-align: middle;
-  padding-top: 8px;
+}
+header .nav-container .container nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
 }
 header .nav-container .container nav ul li {
   display: inline-flex;
-  padding-right: 46px;
+  /* padding-right: 46px; */
   vertical-align: middle;
   transition: all 0.3s ease;
 }
@@ -605,6 +382,8 @@ header .nav-container .social-link ul {
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 header .nav-container .social-link ul li a img {
   width: 44px;
@@ -705,7 +484,163 @@ main {
 .panel-top .logo a img {
   width: 120px;
 }
+/* hero section */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('img/hero-dessert.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35); /* затемнение фона */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 800px; */
+    gap: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: #ff3b2f;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background-color: #fff;
+    color: #ff6f61;
+}
+/* catalog section */
+.catalog h1 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.available {
+    color: green;
+}
+
+.unavailable {
+    color: red;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #2c7be5;
+    color: white;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+/* slidervnews */
+.articles-slider {
+    display: flex;
+    overflow: hidden; /* ховаємо прокручувані частини */
+    gap: 20px;
+}
+
+.article-card {
+    min-width: 280px;
+    flex-shrink: 0; /* щоб картки не стискались */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+/* article page */
+.article-detail h1#article-title{
+  font-size: 24px;
+}
 /* Footer */
 footer {
   background: var(--dark-blue-color);
@@ -812,4 +747,50 @@ footer {
   padding: 1rem 0;
   position: relative;
   z-index: 100;
+}
+.primary-btn {
+  background: #000;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* .secondary-btn {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.large-btn {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 16px;
+} */
+
+.messenger-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.messenger-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  min-width: 180px;
+  text-align: center;
+}
+
+.form-status {
+  margin-top: 15px;
+  font-weight: 500;
+  color: green;
 }

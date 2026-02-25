@@ -1,0 +1,46 @@
+{
+  "category": "Sugar-Free Desserts",
+  "currency": "UAH",
+  "items": [
+    {
+      "id": 1,
+      "name": "Миндальный чизкейк без сахара",
+      "description": "Нежный чизкейк на миндальной основе с натуральным подсластителем.",
+      "price": 220,
+      "image": "assets/img/cheesecake.jpg",
+      "calories": 180,
+      "in_stock": true,
+      "tags": ["keto", "low-carb", "gluten-free"]
+    },
+    {
+      "id": 2,
+      "name": "Шоколадный мусс без сахара",
+      "description": "Воздушный мусс из темного шоколада 85% какао.",
+      "price": 160,
+      "image": "assets/img/mousse.jpg",
+      "calories": 140,
+      "in_stock": true,
+      "tags": ["keto", "high-protein"]
+    },
+    {
+      "id": 3,
+      "name": "Кокосовые трюфели без сахара",
+      "description": "Домашние трюфели с кокосовой стружкой и эритритом.",
+      "price": 120,
+      "image": "assets/img/truffles.jpg",
+      "calories": 90,
+      "in_stock": false,
+      "tags": ["vegan", "gluten-free"]
+    },
+    {
+      "id": 4,
+      "name": "Черничный тарт без сахара",
+      "description": "Тарт на миндальной муке с черничной начинкой.",
+      "price": 210,
+      "image": "assets/img/tart.jpg",
+      "calories": 170,
+      "in_stock": true,
+      "tags": ["low-carb"]
+    }
+  ]
+}

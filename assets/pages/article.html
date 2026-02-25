@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="all">
+  <meta name="revisit-after" content="1 day">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/assets/style.css">
+  <title>No added</title>
+</head>
+
+<body>
+  <div class="page-overlay"></div>
+  <div class="menu-panel">
+    <div class="panel-top">
+      <div class="logo"><a href="/index.html"><img src="/assets/img/logo.png" alt="logo"></a></div>
+      <div class="hamburger-wrap">
+        <button id="hamb-btn-mobile" class="hamburger hamburger--squeeze is-active" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <nav>
+      <div>
+        <ul class="mobile-menu">
+          <li><a href="/index.html#about.html" target="_parent">Про нас</a></li>
+          <li><a href="/index.html#dessert-container" target="_parent">Десерти</a></li>
+          <li><a href="/index.html#news" target="_parent">Статті</a></li>
+          <li><a href="/index.html#contacts" target="_parent">Контакти</a></li>
+        </ul>
+    </nav>
+  </div>
+  <div class="page-wrapper">
+    <header>
+      <div class="nav-container">
+        <div class="container">
+          <div class="logo"><a href="/index.html"><img src="/assets/img/logo.png" alt="logo"></a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="/index.html#about" target="_parent">Про нас</a></li>
+              <li><a href="/index.html#dessert-container" target="_parent">Десерти</a></li>
+              <li><a href="/index.html#news" target="_parent">Статті</a></li>
+              <li><a href="/index.html#contacts" target="_parent">Контакти</a></li>
+            </ul>
+          </nav>
+          <div class="social-link">
+            <ul>
+              <li><a href="#" target="_blank" rel="nofollow"><img src="/assets/img/facebook.svg" alt="link facebook"></a>
+              </li>
+              <li><a href="#" target="_blank" rel="nofollow"><img src="/assets/img/instagram.svg"
+                    alt="link instagram"></a></li>
+              <li><a href="#" target="_blank" rel="nofollow"><img src="/assets/img/tiktok.svg" alt="link tik-tok"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger-wrap">
+            <button id="hamb-btn" class="hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="article-item">
+        <div class="container">
+        <article class="article-detail container">
+            <nav class="breadcrumbs">
+                <a href="/">Головна</a> /
+                <a href="/blog/">Блог</a> /
+                <span id="breadcrumb-title">Новина</span>
+            </nav>
+
+            <h1 id="article-title"></h1>
+            <img id="article-image" src="" alt="">
+            <p id="article-content"></p>
+            <span id="article-category"></span>
+            <time id="article-date"></time>
+        </article>
+        </div>
+      </section>
+
+
+    </main>
+    <footer>
+      <div class="container-footer container">
+        <form id="feedback_form">
+          <input type="text" id="exampleInputName" name="name" placeholder="Введіть ваше ім'я" required>
+          <input type="tel" id="exampleInputTel" name="phone" placeholder="+38 (0__) ___-__-__" required>
+          <textarea name="message" id="feedback_message" placeholder="Ваше повідомлення" required></textarea>
+          <button type="submit" id="btn-form">Надіслати</button>
+        </form>
+        <div id="form-status"></div>
+        <div class="footer-link">
+          <ul>
+            <li><a href="/assets/pages/politic.html">Політика конфіденційності</a></li>
+            <li><a href="/assets/pages/public.html">Договір публічної оферти</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+      <div class="container text-center">
+        <p>&copy;
+          <script>document.write(new Date().getFullYear())</script> WebRocket.
+        </p>
+      </div>
+    </footer>
+    <div class="cursor-light"></div>
+  </div>
+  <!-- Модальное окно -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal container">
+      <button class="modal-close" id="closeModal">×</button>
+      <h2 class="modal-title">Обговорення проекту</h2>
+      <form class="modal-form" id="projectForm">
+        <input type="text" id="userName" placeholder="Введіть ваше ім'я" required>
+        <input id="userEmail" name="email" type="text" placeholder="Ваш email" required>
+        <input type="tel" id="userPhone" placeholder="+38 (0__) ___-__-__">
+        <textarea id="projectDetails" name="details" placeholder="Опишіть ваш проект"></textarea>
+        <button type="submit" class="submit-btn">Надіслати</button>
+      </form>
+    </div>
+  </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Отримуємо slug з URL
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("slug");
+
+    if (!slug) {
+        document.body.innerHTML = "<h1>Стаття не знайдена</h1>";
+        return;
+    }
+
+    fetch("/assets/data/articles.json")
+        .then(response => response.json())
+        .then(data => {
+
+            const article = data.find(item => item.slug === slug);
+
+            if (!article) {
+                document.body.innerHTML = "<h1>Стаття не знайдена</h1>";
+                return;
+            }
+
+            // Заповнюємо шаблон
+            document.getElementById("article-title").textContent = article.title;
+            document.getElementById("article-category").textContent = article.category;
+            document.getElementById("article-date").textContent =
+                new Date(article.date).toLocaleDateString('uk-UA');
+            document.getElementById("article-image").src = article.image;
+            document.getElementById("article-content").innerHTML = article.content;
+
+        });
+});
+</script>
+  <script src="/assets/main.js"></script>
+
+</body>
+
+</html>

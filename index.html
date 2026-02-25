@@ -17,7 +17,7 @@
   <div class="page-overlay"></div>
   <div class="menu-panel">
     <div class="panel-top">
-      <div class="logo"><a href="#"><img src="/assets/img/logo.svg" alt="logo"></a></div>
+      <div class="logo"><a href="#"><img src="/assets/img/logo.png" alt="logo"></a></div>
       <div class="hamburger-wrap">
         <button id="hamb-btn-mobile" class="hamburger hamburger--squeeze is-active" type="button">
           <span class="hamburger-box">
@@ -29,9 +29,9 @@
     <nav>
       <div>
         <ul class="mobile-menu">
-          <li><a href="#about.html" target="_parent">Про нас</a></li>
-          <li><a href="#dessert.html" target="_parent">Десерти</a></li>
-          <li><a href="#artic.html" target="_parent">Статті</a></li>
+          <li><a href="#aboutus" target="_parent">Про нас</a></li>
+          <li><a href="#dessert-container" target="_parent">Десерти</a></li>
+          <li><a href="#news" target="_parent">Статті</a></li>
           <li><a href="#contacts.html" target="_parent">Контакти</a></li>
         </ul>
     </nav>
@@ -40,13 +40,13 @@
     <header>
       <div class="nav-container">
         <div class="container">
-          <div class="logo"><a href="#"><img src="/assets/img/logo.svg" alt="logo"></a>
+          <div class="logo"><a href="#"><img src="/assets/img/logo.png" alt="logo"></a>
           </div>
           <nav>
             <ul>
-              <li><a href="#about.html" target="_parent">Про нас</a></li>
-              <li><a href="#dessert.html" target="_parent">Десерти</a></li>
-              <li><a href="#artic.html" target="_parent">Статті</a></li>
+              <li><a href="#aboutus" target="_parent">Про нас</a></li>
+              <li><a href="#dessert-container" target="_parent">Десерти</a></li>
+              <li><a href="#news" target="_parent">Статті</a></li>
               <li><a href="#contacts.html" target="_parent">Контакти</a></li>
             </ul>
           </nav>
@@ -71,51 +71,276 @@
       </div>
     </header>
     <main>
-      <div class="hero">
-    <!-- Buttons -->
-    <div>
-      <button id="prevButton" class="wave"><i class="fa-solid fa-chevron-left"></i></button>
-      <button id="nextButton" class="wave"><i class="fa-solid fa-chevron-right"></i></button>
-    </div>
-    <!-- Fixed Sections -->
-    <div class="text">
-      <h1 class="h1">Pear</h1>
-      <div class="cane-image ">
-        <img src="https://www.yudiz.com/codepen/fruity/cane.svg" alt="">
-        <img src="https://www.yudiz.com/codepen/fruity/Labels.jpg" alt="" class="cane-labels">
+      <div class="parallax-wrapper">
+
+    <!-- Фон -->
+  <img src="assets/img/fon1.webp" class="layer bg" />
+
+  <!-- Ягоди -->
+<img src="assets/img/malyna.png" class="layer berry berry1" data-speed="0.3" />
+<img src="assets/img/poiunyzja.png" class="layer berry berry2" data-speed="0.5"/>
+<img src="assets/img/malyna1.png" class="layer berry berry3" data-speed="0.7"/>
+<img src="assets/img/poiunyzja1.png" class="layer berry berry4" data-speed="0.9"/>
+
+<img src="assets/img/chok1.png" class="layer chocolate ch1" data-speed="0.11"/>
+<img src="assets/img/chok2.png" class="layer chocolate ch2" data-speed="0.13"/>
+<img src="assets/img/chok3.png" class="layer chocolate ch3" data-speed="0.15"/>
+<img src="assets/img/chok4.png" class="layer chocolate ch4" data-speed="0.17"/>
+<img src="assets/img/chok5.png" class="layer chocolate ch5" data-speed="0.19"/>
+
+</div>
+<section class="hero-index">
+  <!-- <img src="assets/img/realistic-dripping-chocolate-texture-border-free-vector.png" alt=""> -->
+    <img src="assets/img/00807.png" alt="" style="width: 100%;">
+</section>
+<!-- <section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Насолоджуйтесь солодким без цукру</h1>
+      <p>Натуральні десерти, низькокалорійні та без шкоди для здоров'я</p>
+      <div class="hero-buttons">
+        <a href="index.html#dessert-container" target="_parent" class="btn primary">Дивитися асортимент</a>
+        <a href="#order" class="btn secondary">Замовити зараз</a>
       </div>
     </div>
-    <!-- Fixed Sections Ends-->
-    <!-- Fruits Images Section -->
-    <div class="section-container-main">
-      <div class="section-container">
-        <section class="section" id="section1">
-          <div class="fruit-images">
-            <div class="image-one fruit-image"><img src="https://www.yudiz.com/codepen/fruity/pear-one.png" alt="pear-image"></div>
-            <div class="image-two fruit-image"><img src="https://www.yudiz.com/codepen/fruity/pear-two.png" alt="pear-image"></div>
-            <div class="image-three fruit-image"><img src="https://www.yudiz.com/codepen/fruity/pear-three.png" alt="pear-image"></div>
-            <div class="image-four fruit-image"><img src="https://www.yudiz.com/codepen/fruity/pear-four.png" alt="pear-image"></div>
-          </div>
-        </section>
-        <section class="section" id="section2">
-          <div class="fruit-images">
-            <div class="image-one fruit-image"><img src="https://www.yudiz.com/codepen/fruity/apple-one.png" alt="apple-image"></div>
-            <div class="image-two fruit-image"><img src="https://www.yudiz.com/codepen/fruity/apple-two.png" alt="apple-image"></div>
-            <div class="image-three fruit-image"><img src="https://www.yudiz.com/codepen/fruity/apple-three.png" alt="apple-image"></div>
-            <div class="image-four fruit-image"><img src="https://www.yudiz.com/codepen/fruity/apple-four.png" alt="apple-image"></div>
-          </div>
-        </section>
-        <section class="section" id="section3">
-          <div class="fruit-images">
-            <div class="image-one fruit-image"><img src="https://www.yudiz.com/codepen/fruity/exotic-one.png" alt="exotic-image"></div>
-            <div class="image-two fruit-image"><img src="https://www.yudiz.com/codepen/fruity/exotic-two.png" alt="exotic-image"></div>
-            <div class="image-three fruit-image"><img src="https://www.yudiz.com/codepen/fruity/exotic-three.png" alt="exotic-image"></div>
-            <div class="image-four fruit-image"><img src="https://www.yudiz.com/codepen/fruity/exotic-four.png" alt="exotic-image"></div>
-          </div>
-        </section>
-      </div>
+  </div>
+</section> -->
+ <section class="catalog">
+  <div class="container">
+    <h1>Десерты </h1>
+    <div id="dessert-container" class="grid"></div>
+
+  </div>
+  </section>
+<section id="news" class="articles-slider-section">
+<div class="container">
+    <div class="section-header">
+        <h2>Корисні статті</h2>
+    </div>
+    <div class="articles-slider-wrapper">
+        <button class="slider-btn prev">&#10094;</button>
+        <div class="articles-slider" id="articlesSlider">
+        </div>
+        <button class="slider-btn next">&#10095;</button>
     </div>
 </div>
+</section>
+<section id="aboutus">
+  <div class="container">
+        <div class="about-header">
+            <h2>Про No Added</h2>
+            <p class="about-subtitle">
+                Ми створюємо десерти без доданого цукру для тих, хто обирає баланс смаку, здоров’я та усвідомленого способу життя.
+            </p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    <strong>No Added</strong> — це сучасна кондитерська компанія, що спеціалізується на виробництві десертів та морозива без доданого цукру.
+                    Ми поєднуємо інноваційні технології, натуральні інгредієнти та професійний підхід до рецептури.
+                </p>
+
+                <p>
+                    Наша місія — зробити солодощі доступними для людей з різними харчовими потребами:
+                    при контролі рівня цукру, діабеті, непереносимості окремих інгредієнтів або дотриманні здорового способу життя.
+                </p>
+                <p>
+                    Ми створюємо інклюзивний простір, де кожен може дозволити собі десерт без компромісів.
+                    Смак, текстура та якість залишаються на рівні класичних виробів — змінюється лише склад.
+                </p>
+            </div>
+            <div class="about-values">
+                <div class="value-item">
+                    <h3>Інноваційність</h3>
+                    <p>
+                        Використовуємо сучасні підсолоджувачі нового покоління та технології,
+                        що дозволяють зберегти природний смак без доданого цукру.
+                    </p>
+                </div>
+                <div class="value-item">
+                    <h3>Інклюзивність</h3>
+                    <p>
+                        Ми орієнтуємося на людей з особливими харчовими потребами,
+                        створюючи безпечні та доступні рішення.
+                    </p>
+                </div>
+              <div class="value-item">
+                    <h3>Якість</h3>
+                    <p>
+                        Контролюємо кожен етап виробництва — від відбору інгредієнтів
+                        до фінального продукту.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-vision">
+    <div class="container">
+        <h2>Наше бачення</h2>
+        <p>
+            Ми прагнемо стати лідером у сегменті десертів без доданого цукру,
+            формуючи нову культуру споживання солодощів —
+            без обмежень, без зайвих інгредієнтів, без втрати смаку.
+        </p>
+    </div>
+</section>
+<section id="contacts" class="contact-section">
+  <div class="container">
+
+    <div class="contact-header">
+      <h2>Контакти</h2>
+      <p class="contact-subtitle">
+        Ми відкриті до співпраці, партнерств та індивідуальних запитів.
+      </p>
+    </div>
+
+    <div class="contact-content">
+
+      <!-- Контактна інформація -->
+      <div class="contact-info">
+
+        <div class="contact-item">
+          <h3>Адреса</h3>
+          <p>м. ЛЬвів</p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Телефон</h3>
+          <p>
+            <a href="tel:+380000000000" aria-label="Подзвонити до No Added">
+              +38 (000) 000 00 00
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:noadded.contacts@gmail.com" aria-label="Написати email No Added">
+              noadded.contacts@gmail.com
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Графік роботи</h3>
+          <p>Пн–Пт: 09:00–18:00</p>
+        </div>
+
+        <!-- Реквізити -->
+        <div class="contact-item company-details">
+          <h3>Реквізити</h3>
+          <p>ФОП Іваненко Іван Іванович</p>
+          <p>ЄДРПОУ: 0000000000</p>
+          <p>IBAN: UA00 0000 0000 0000 0000 0000 000</p>
+        </div>
+
+      </div>
+
+      <!-- Форма -->
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="Ваше ім'я" required aria-label="Ваше ім'я">
+          <input type="email" name="email" placeholder="Email" required aria-label="Ваш email">
+          <textarea name="message" rows="5" placeholder="Ваше повідомлення" required aria-label="Текст повідомлення"></textarea>
+          
+          <!-- <button type="submit" class="primary-btn large-btn">
+            Надіслати повідомлення
+          </button> -->
+
+          <div id="contactStatus" class="form-status"></div>
+        </form>
+
+        <!-- CTA -->
+        <!-- <button class="secondary-btn large-btn" id="openConsultationModal">
+          Замовити консультацію
+        </button> -->
+      </div>
+
+    </div>
+
+    <!-- Google Maps -->
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps?q=Kyiv&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Мапа розташування No Added">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+<section class="social-section">
+    <div class="container">
+
+        <div class="social-header">
+            <h2>Ми в соціальних мережах</h2>
+            <p>
+                Долучайтеся до спільноти No Added та слідкуйте за новими смаками,
+                сезонними колекціями та спеціальними пропозиціями.
+            </p>
+        </div>
+
+        <div class="social-links">
+
+            <a href="#" class="social-link" target="_blank" aria-label="Instagram">
+                <span class="social-icon">📷</span>
+                <span>Instagram</span>
+            </a>
+
+            <a href="#" class="social-link" target="_blank" aria-label="Facebook">
+                <span class="social-icon">📘</span>
+                <span>Facebook</span>
+            </a>
+
+            <a href="#" class="social-link" target="_blank" aria-label="TikTok">
+                <span class="social-icon">🎵</span>
+                <span>TikTok</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+<section class="messengers-section">
+  <div class="container">
+
+    <h2>Швидкий зв'язок</h2>
+
+    <div class="messenger-links">
+
+      <a href="https://t.me/username"
+         target="_blank"
+         class="messenger-btn"
+         aria-label="Написати в Telegram">
+        Telegram
+      </a>
+
+      <a href="viber://chat?number=%2B380000000000"
+         class="messenger-btn"
+         aria-label="Написати у Viber">
+        Viber
+      </a>
+
+      <a href="https://wa.me/380000000000"
+         target="_blank"
+         class="messenger-btn"
+         aria-label="Написати у WhatsApp">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
     </main>
     <footer>
       <div class="container-footer container">
@@ -123,7 +348,7 @@
           <input type="text" id="exampleInputName" name="name" placeholder="Введіть ваше ім'я" required>
           <input type="tel" id="exampleInputTel" name="phone" placeholder="+38 (0__) ___-__-__" required>
           <textarea name="message" id="feedback_message" placeholder="Ваше повідомлення" required></textarea>
-          <button type="submit" id="btn-form">Надіслати</button>
+          <!-- <button type="submit" id="btn-form">Надіслати</button> -->
         </form>
         <div id="form-status"></div>
         <div class="footer-link">
@@ -157,6 +382,22 @@
       </form>
     </div>
   </div>
+<script>
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  document.querySelectorAll(".layer").forEach(el => {
+    const speed = parseFloat(el.dataset.speed) || 0;
+    el.style.transform = `translateY(${scrollY * speed}px)`;
+  });
+
+  const bg = document.querySelector(".bg");
+  if (bg) {
+    bg.style.transform = `translateY(${scrollY * 0.2}px)`;
+  }
+});
+</script>
+  <script src="/assets/js/index.js"></script>
   <script src="/assets/main.js"></script>
 
 </body>
